@@ -3,7 +3,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 export type ExampleProps = {
   title: string;
-  text: string;
+  text?: string;
   link?: {
     href: string;
     text: string;
