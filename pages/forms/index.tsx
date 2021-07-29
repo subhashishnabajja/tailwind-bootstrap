@@ -18,7 +18,7 @@ Form.example = () => {
     <Example
       key='1'
       text={codes[0]}
-      title='Form Example'
+      title={title}
       link={{
         text: "Bootstrap forms",
         href: "https://getbootstrap.com/docs/5.0/forms/overview/",
@@ -57,8 +57,10 @@ Form.example = () => {
 };
 
 Form.text = () => {
+  const title = "Form text";
+  Form.example.displayName = title.split(" ").join("");
   return (
-    <Example title='Form text' key='2' text={codes[1]}>
+    <Example title={title} key='2' text={codes[1]}>
       <label htmlFor='inputPassword5' className='inline-block mb-2'>
         Password
       </label>
@@ -76,8 +78,10 @@ Form.text = () => {
   );
 };
 Form.inlineText = () => {
+  const title = "Form with inline text";
+  Form.example.displayName = title.split(" ").join("");
   return (
-    <Example key='3' title='Form with inline text' text={codes[2]}>
+    <Example key='3' title={title} text={codes[2]}>
       <div className='flex flex-wrap items-center w-full'>
         <div className='flex-auto flex-grow-0 flex-shrink-0 px-2 pt-4'>
           <label htmlFor='inputPassword6' className=''>
@@ -102,8 +106,10 @@ Form.inlineText = () => {
   );
 };
 Form.disabled = () => {
+  const title = "Disabled Forms";
+  Form.example.displayName = title.split(" ").join("");
   return (
-    <Example title='Disabled Forms' text={codes[3]}>
+    <Example title={title} text={codes[3]}>
       <form className='block'>
         <fieldset disabled>
           <legend className='mb-2 text-2xl'>Disabled fieldset example</legend>
